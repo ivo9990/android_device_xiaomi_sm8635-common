@@ -216,6 +216,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('\n# Charger\n/sys/class/qcom-battery     night_charging            0660    system  system'),
     'system_ext/etc/seccomp_policy/tcmd.policy': blob_fixup()
         .add_line_if_missing('lseek: 1'),
+    'vendor/etc/seccomp_policy/qsap_qapeservice.policy': blob_fixup()
+        .add_line_if_missing('lseek: 1'),
     'system_ext/lib64/libwfdcommonutils.so': blob_fixup()
         .remove_needed('libheif.so'),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
